@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic[email]
+sqlalchemy
+beautifulsoup4
+lxml
+requests
+httpx
+python-dotenv
+python-multipart
+pandas
+numpy
+dnspython
+pytest
+pytest-cov
