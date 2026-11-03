@@ -9,10 +9,13 @@ def test_email_analyzer_initialization():
 def test_email_analysis_returns_result():
     analyzer = EmailAnalyzer()
 
-    result = analyzer.analyze(
-        subject="Meeting tomorrow",
-        body="Hello, let's meet tomorrow to discuss the project.",
-        sender="team@example.com"
+    result = analyzer.analyze_email(
+        email_text="""
+        Subject: Meeting tomorrow
+
+        Hello, let's meet tomorrow to discuss the project.
+        From: team@example.com
+        """
     )
 
     assert result is not None
@@ -21,10 +24,14 @@ def test_email_analysis_returns_result():
 def test_suspicious_email_analysis():
     analyzer = EmailAnalyzer()
 
-    result = analyzer.analyze(
-        subject="Urgent! Verify your account",
-        body="Click here immediately to claim your prize.",
-        sender="unknown@example.com"
+    result = analyzer.analyze_email(
+        email_text="""
+        Subject: Urgent! Verify your account
+
+        Click here immediately to claim your prize.
+        Your account will be suspended unless you verify now.
+        From: unknown@example.com
+        """
     )
 
     assert result is not None
