@@ -1,0 +1,13 @@
+mkdir -p frontend tests data
+
+touch main.py
+touch database.py
+touch schemas.py
+touch email_analyzer.py
+touch requirements.txt
+touch .gitignore
+
+touch frontend/dashboard.py
+touch tests/test_email_analyzer.py
+
+ls -la
