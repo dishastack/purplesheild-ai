@@ -1,5 +1,4 @@
 # Python cache
-__pycache__/
 *.py[cod]
 *$py.class
 
@@ -14,7 +13,6 @@ env/
 !.env.example
 
 # Database files
-*.db
 *.sqlite
 *.sqlite3
 
